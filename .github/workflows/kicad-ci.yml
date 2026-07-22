@@ -17,14 +17,13 @@ jobs:
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # <--- UPDATED TO v4
 
       - name: Run Electrical Rule Check (ERC)
         run: |
           echo "Running ERC on Schematic..."
           kicad-cli sch erc electrical/kicad_project/flight_controller.kicad_sch --format rpt --output erc_report.rpt
           
-          # Check if the report contains errors
           if grep -q "Error" erc_report.rpt; then
             echo "ERC FAILED! There are electrical shorts or floating pins."
             cat erc_report.rpt
@@ -36,7 +35,6 @@ jobs:
           echo "Running DRC on PCB Layout..."
           kicad-cli pcb drc electrical/kicad_project/flight_controller.kicad_pcb --format rpt --output drc_report.rpt
           
-          # Check if traces are crossing or too close (violating isolation)
           if grep -q "Error" drc_report.rpt; then
             echo "DRC FAILED! Trace widths or clearances violate PCB physics."
             cat drc_report.rpt
@@ -44,7 +42,7 @@ jobs:
           fi
 
       - name: Upload Logs on Success/Failure
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4   # <--- UPDATED TO v4
         if: always()
         with:
           name: KiCad_Reports
