@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "Running DRC on PCB Layout..."
           # Same fix here.
-          kicad-cli pcb drc electrical/kicad_project/flight_controller.kicad_pcb --output drc_report.txt
+          kicad-cli pcb drc electrical/kicad_project/kicad_project.kicad_pcb --output drc_report.txt
           
           cat drc_report.txt
           
