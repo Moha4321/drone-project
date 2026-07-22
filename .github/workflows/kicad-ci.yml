@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "Running ERC on Schematic..."
           # Removed the invalid format flag. Outputs to plain text.
-          kicad-cli sch erc electrical/kicad_project/flight_controller.kicad_sch --output erc_report.txt
+          kicad-cli sch erc electrical/kicad_project/kicad_project.kicad_sch --output erc_report.txt
           
           # Print the report to the GitHub terminal so you can read it
           cat erc_report.txt
