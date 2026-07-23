@@ -2045,7 +2045,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "351d3545-39a9-497c-b097-5c0065fa757f")
+			(uuid "351d3545-39a9-497c-b097-5c0065fa7580")
 		)
 		(instances
 			(project "kicad_project"
@@ -2123,7 +2123,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "7f182ff2-854e-48e1-959c-08c98e462e8a")
+			(uuid "7f182ff2-854e-48e1-959c-08c98e462e8b")
 		)
 		(instances
 			(project "kicad_project"
@@ -2280,10 +2280,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a080e3b5-4675-4d10-8804-938822969f8f")
+			(uuid "a080e3b5-4675-4d10-8804-938822969f90")
 		)
 		(pin "2"
-			(uuid "7b28b9cc-9a6b-41cb-8553-5bb662fd7953")
+			(uuid "7b28b9cc-9a6b-41cb-8553-5bb662fd7954")
 		)
 		(instances
 			(project "kicad_project"
